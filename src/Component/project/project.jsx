@@ -64,7 +64,7 @@ function ProjectWeb() {
       autoplay={{ delay: 3000 }}
       loop={true}
       scrollbar={{draggable: true}}
-      className="md:w-[40rem] lg:w-[35rem]"
+      className="w-[25rem] md:w-[40rem] lg:w-[35rem] sm:w-[25rem]"
     >
       <SwiperSlide>
         <Content img={profilProject} />
@@ -107,7 +107,7 @@ function Content({ img }) {
             xl:h-[23rem]
           " src={img} alt="" />
 
-          <div id="text" className="absolute flex text-[#ebebeb] justify-between items-center w-full font-mono font-bold bottom-2 px-5
+          <div id="text" className="absolute flex text-[#ebebeb] items-center w-full font-mono font-bold bottom-2 px-5
 
           ">
             <button className="border-2 border-[#cececede] py-1 px-3 rounded-lg bg-[#686868]
@@ -115,12 +115,6 @@ function Content({ img }) {
               lg:text-sm
               xl:text-2xl
               ">Detail</button>
-            <button
-            className="border-2 before:bg-[red] bg-[#686868] border-[#cececede] py-1 px-3 rounded-lg
-            md:text-3xl
-            lg:text-sm
-            xl:text-2xl
-            ">Show More</button>
           </div>
         </div>
       </div>

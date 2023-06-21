@@ -32,7 +32,7 @@ export default function Header() {
             xl:text-[2.5rem]
           "/>
         </Link>
-        <Link to={"/skils"}>
+        <Link to={"/skills"}>
           <RiToolsFill className="text-[2.3em] text-[#000000] font-bold bg-[rgb(255,255,255)] block p-1 rounded-lg
             md:text-[4rem]
             lg:text-[2rem]

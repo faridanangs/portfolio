@@ -19,10 +19,14 @@ export default function Home() {
       <div>
         <div className="relative h-screen flex justify-center items-center">
           
-            <img className=" animate-icon absolute left-[79px] -mt-[40px]
+            <img className=" animate-icon  z-10 absolute left-[75px] -mt-[40px]
+              sm:left-[180px]
+              sm:w-[3.4rem]
+              sm:-mt-[180px]  
+              
+              
               md:left-[230px]
               md:w-[4rem]
-              md:z-10
               md:-mt-[70px]  
 
               lg:-mt-[230px]
@@ -33,7 +37,11 @@ export default function Home() {
               xl:w-[4rem]
 
             " src={tailwindIcon} alt="tailwindIcon"/>
-            <img className=" absolute animate-icon right-[72px] -mt-[50px]
+            <img className=" absolute animate-icon right-[68px] -mt-[50px]
+              sm:right-[180px]
+              sm:w-[3.7rem]
+              sm:-mt-[180px] 
+
               md:right-[220px]      
               md:w-[3.9rem]
               md:z-10
@@ -47,15 +55,20 @@ export default function Home() {
               xl:w-[4rem]
             " src={reactIcont} alt="reactIcon"/>
           <img src={profil} alt="profile" className="absolute 
-            md:w-[35rem]
+            sm:w-[27rem]
+            sm:top-[10rem]
+            
+            md:top-[24rem]
+            md:w-[30rem]
+            
             lg:w-[25rem]
             lg:top-[5rem]
             xl:top-[8rem]
             xl:w-[30rem]
           "/>
 
-          <div className="absolute text-[#eefffe] mt-3 flex -mb-[410px] flex-col items-center p-3 font-hebo
-            md:mt-[15rem]
+          <div className="absolute text-[#eefffe] mt-4 flex -mb-[410px] flex-col items-center p-3 font-hebo
+            md:mt-[20rem]
             lg:-mt-[1rem]
             xl:mt-[8rem]
           ">
@@ -64,7 +77,7 @@ export default function Home() {
               lg:text-2xl
               xl:text-4xl
             ">Farid anang s</h1>
-            <div className="flex my-2 text-2xl
+            <div className="flex my-2 text-2xl flex-wrap
                 md:text-3xl
                 lg:text-xl
                 xl:text-2xl
@@ -88,9 +101,9 @@ function MyComponent() {
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ["frontend developer"],
-      typeSpeed: 150,
+      typeSpeed: 100,
       backSpeed: 30,
-      backDelay: 1700,
+      backDelay: 2000,
       loop: true,
     });
     return () => typed.destroy();

@@ -2,11 +2,28 @@ import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai' ;
 import { FaFacebookF } from 'react-icons/fa' ;   
 import ganteng from './../../../images/profile.webp'
 
+const sosMed = [
+    {
+        id: 0,
+        link: 'https://twitter.com/Temlep557/',
+        icon: <AiOutlineTwitter />
+    },
+    {
+        id: 1,
+        link: 'https://www.facebook.com/sick.sick.102361/',
+        icon: <FaFacebookF />
+    },
+    {
+        id: 2,
+        link: 'https://www.instagram.com/stealthbyte01/',
+        icon: <AiFillInstagram />
+    },
+]
 
 export default function About(){
     return(
-        <section>
-            <div className=" px-5 pt-1 h-screen bg-[#e7e7e7c9] ">
+        <section className=" px-5 pt-1 h-screen w-full bg-[#e7e7e7c9]">
+            <div>
             <p className='font-bold
                 md:text-[3rem]
                 lg:text-[1.4rem]
@@ -33,12 +50,12 @@ export default function About(){
                         lg:text-lg lg:w-[35rem] lg:h-[9rem]
                         xl:text-2xl xl:w-[40rem] xl:h-full xl:overflow-hidden
                     '>
-                        Hallo nama saya farid anang s.. saya lahir pada bulan mei 2006
-                        saya tertarik belajar it pada saat saya melihat banyak berita yang
-                        menyiarkan tentang it sehingga saya penasaran dan mulai mempelajarinya pada
-                        bulan oktober 2022 dengan mempelajari bahasa python.
-                        Saya mulai fokus mempelajari aplikasi web pada bulan maret 2023 dengan
-                        mempelajar html css dan javascript.
+                        Hello, my name is Farid Anang S. I was born in May 2006
+                        I am interested in studying IT when I see a lot of news
+                        broadcast about IT so I got curious and started learning about it
+                        October 2022 by learning Python.
+                        I started focusing on learning WevDev in March 2023 with
+                        learn html css and javascript.
                     </p>
                     <button className=" border-[#adadad] border rounded-lg p-1 my-3 hover:scale-[1.02]
                         md:text-3xl md:p-3 md:mt-4
@@ -46,21 +63,19 @@ export default function About(){
                         xl:text-3xl xl:px-3 xl:py-2 xl:mt-6
                     ">Download Cv</button>
                     <div className=" flex gap-3 md:gap-6 lg:gap-5 ">
-                        <a href='https://instagram.com' className=" border-[#adadad] border p-1 text-[1rem] rounded-lg  
-                            md:text-[2.5rem]
-                            lg:text-[1rem]
-                            xl:text-[2rem]
-                        "><AiFillInstagram /></a>
-                        <a href='https://instagram.com' className=" border-[#adadad] border p-1 text-[1rem] rounded-lg 
-                            md:text-[2.5rem]
-                            lg:text-[1rem]
-                            xl:text-[2rem]
-                        "><FaFacebookF /></a>
-                        <a href='https://instagram.com' className=" border-[#adadad] border p-1 text-[1rem] rounded-lg  
-                            md:text-[2.5rem]
-                            lg:text-[1rem]
-                            xl:text-[2rem]
-                        "><AiOutlineTwitter /></a>
+                        {
+                            sosMed.map((data)=> {
+                                return(
+                                    <a key={data.id} href={data.link} className=" border-[#adadad] border p-1 text-[1rem] rounded-lg  
+                                        md:text-[2.5rem]
+                                        lg:text-[1rem]
+                                        xl:text-[2rem]
+                                    ">{data.icon}</a>    
+                                )
+
+                            })
+
+                        }
                     </div>
                 </div>
             </div>

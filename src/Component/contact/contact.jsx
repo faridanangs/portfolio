@@ -22,11 +22,14 @@ export default function Contact() {
           <FaUserAlt className="text-[5rem] md:text-[8rem] lg:text-[4rem]" />
           <h1 className=" text-2xl font-hebo font-bold md:text-4xl lg:text-xl">Anangs</h1>
         </div>
-        <div className="">
-          <form onSubmit={(e) => e.preventDefault()} className=" md:flex flex justify-center flex-col md:flex-col">
+        <div>
+          <form
+            className=" md:flex flex justify-center flex-col md:flex-col">
               <input
                 type="text"
+                required
                 placeholder="name"
+                
                 className=" rounded-lg pl-1 outline-none p-1 border-2
                                   md:w-[35rem] md:h-[4rem] md:text-3xl md:py-6
                                   lg:w-[25rem] lg:h-[1rem] lg:text-xl lg:py-5
@@ -34,17 +37,21 @@ export default function Contact() {
                                   />
               <input
                 type="text"
+                required
                 placeholder="email or phone"
                 maxLength={25}
+                
                 className=" rounded-lg pl-1 outline-none p-1 border-2 my-1
                   md:w-[35rem] md:h-[4rem] md:text-3xl md:py-6
                   lg:w-[25rem] lg:h-[1rem] lg:text-xl lg:py-5
                               "
               />
             <textarea
+              required
               placeholder="message"
               rows={5}
               cols={24}
+              
               className=" outline-none rounded-lg pl-1 resize-none block
                             md:w-[35rem] md:text-3xl 
                             lg:w-[25rem] lg:text-xl 
@@ -55,9 +62,8 @@ export default function Contact() {
               className=" border-2 px-2 rounded-lg mt-2 font-hebo bg-[#c7c5c5] 
                 md:text-4xl md:w-[10rem]
                 lg:text-xl lg:w-[5rem]
-              ">
-              Send
-            </button>
+              "
+              >Send</button>
           </form>
         </div>
       </div>
